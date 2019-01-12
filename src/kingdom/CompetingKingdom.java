@@ -16,7 +16,7 @@ public class CompetingKingdom {
     }
 
     public void addMessagesToBallotToSendToOtherKingdoms(MessageGenerator messageGenerator, Ballot ballot) {
-        List<String> existingKingdoms = KingdomUtil.getExistingKingdoms();
+        List<String> existingKingdoms = KingdomUtil.getExistingKingdomsNames();
 
         List<String> allKingdoms = new LinkedList<>(existingKingdoms);
         allKingdoms.remove(name);

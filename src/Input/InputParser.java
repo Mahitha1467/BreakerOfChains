@@ -16,7 +16,7 @@ public class InputParser {
         }
 
         List<String> competingKingdoms = Arrays.asList(input.toLowerCase().split(INPUT_SEPARATOR));
-        if(!KingdomUtil.getExistingKingdoms().containsAll(competingKingdoms)) {
+        if(!KingdomUtil.getExistingKingdomsNames().containsAll(competingKingdoms)) {
             throw new InvalidInputException("Given input should contain only existing kingdoms. Existing kingdoms are" +
                     " 'Air, Land, Ice, Water, Space, Fire' and expected format is 'Air Space'");
         }

@@ -45,7 +45,7 @@ public class CompetingKingdomTest {
         Message message1 = new Message(kingdomName, "air", "qwert");
         Message message2 = new Message(kingdomName, "water", "zxcvbb");
 
-        when(KingdomUtil.getExistingKingdoms()).thenReturn(allKingdoms);
+        when(KingdomUtil.getExistingKingdomsNames()).thenReturn(allKingdoms);
         when(messageGenerator.generateMessage())
                 .thenReturn("qwert")
                 .thenReturn("zxcvbb");
@@ -55,7 +55,7 @@ public class CompetingKingdomTest {
         competingKingdom.addMessagesToBallotToSendToOtherKingdoms(messageGenerator, ballot);
 
         verifyStatic(times(1));
-        KingdomUtil.getExistingKingdoms();
+        KingdomUtil.getExistingKingdomsNames();
         verify(messageGenerator, times(2)).generateMessage();
         verify(ballot, times(1)).add(message1);
         verify(ballot, times(1)).add(message2);
