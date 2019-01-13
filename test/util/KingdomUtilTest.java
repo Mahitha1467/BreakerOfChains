@@ -17,6 +17,7 @@ public class KingdomUtilTest {
         expectedKingdoms.put("ice", "mammoth");
         expectedKingdoms.put("air", "owl");
         expectedKingdoms.put("fire", "dragon");
+        expectedKingdoms.put("space", "gorilla");
 
         Map<String, String> existingKingdoms = KingdomUtil.getExistingKingdoms();
 

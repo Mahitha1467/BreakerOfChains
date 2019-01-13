@@ -12,7 +12,8 @@ public class RulerChecker {
     private static final int ONE = 1;
 
     public boolean isRulerExist(List<Kingdom> kingdoms) {
-        return kingdoms.size() == ONE && kingdoms.get(ZERO).getAllies().size() >= ONE;
+        List<Kingdom> tiedKingdoms = getTiedKingdoms(kingdoms);
+        return tiedKingdoms.size() == ONE && tiedKingdoms.get(ZERO).getAllies().size() >= ONE;
     }
 
     public List<String> getTiedKingdomNames(List<Kingdom> kingdoms) {
@@ -37,5 +38,9 @@ public class RulerChecker {
         }
 
         return tiedKingdoms;
+    }
+
+    public Kingdom getRuler(List<Kingdom> kingdoms) {
+        return getTiedKingdoms(kingdoms).get(ZERO);
     }
 }

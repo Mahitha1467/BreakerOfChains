@@ -16,6 +16,7 @@ public class KingdomUtil {
         existingKingdoms.put("ice", "mammoth");
         existingKingdoms.put("air", "owl");
         existingKingdoms.put("fire", "dragon");
+        existingKingdoms.put("space", "gorilla");
     }
 
     public static List<String> getExistingKingdomsNames() {

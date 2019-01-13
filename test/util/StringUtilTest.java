@@ -85,4 +85,34 @@ public class StringUtilTest {
         assertEquals(expected.size(), uniqueChars.size());
         assertEquals(expected, uniqueChars);
     }
+
+    @Test
+    public void shouldReturnEmptyStringIfTheGivenStringIsNull() {
+        assertEquals("", StringUtil.getCapitalize(""));
+    }
+
+    @Test
+    public void shouldReturnEmptyStringIfTheGivenStringIsEmpty() {
+        assertEquals("", StringUtil.getCapitalize(""));
+    }
+
+    @Test
+    public void shouldReturnByCapitalizingTheGivenString() {
+        assertEquals("Arohi", StringUtil.getCapitalize("arohi"));
+    }
+
+    @Test
+    public void shouldReturnEmptyIfTheGivenStringIsNull() {
+        assertEquals("", StringUtil.removeFirstAndLastChars(null));
+    }
+
+    @Test
+    public void shouldReturnEmptyIfTheGivenStringIsEmpty() {
+        assertEquals("", StringUtil.removeFirstAndLastChars(""));
+    }
+
+    @Test
+    public void shouldReturnStringByRemovingFirstAndLastCharsIfTheGivenStringLengthIsMoreThan2() {
+        assertEquals("bc", StringUtil.removeFirstAndLastChars("abcd"));
+    }
 }

@@ -62,4 +62,17 @@ public class RulerCheckerTest {
 
         assertEquals(Arrays.asList("land", "air"), tiedKingdoms);
     }
+
+    @Test
+    public void shouldGetRuler() {
+        List<Kingdom> kingdoms = Arrays.asList(
+                new Kingdom("land", Collections.singletonList("water")),
+                new Kingdom("air", Arrays.asList("fire", "space"))
+        );
+
+        Kingdom ruler = rulerChecker.getRuler(kingdoms);
+
+        assertEquals("air", ruler.getName());
+        assertEquals(Arrays.asList("fire", "space"), ruler.getAllies());
+    }
 }
