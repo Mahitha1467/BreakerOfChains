@@ -12,6 +12,10 @@ public class Kingdom {
         this.allies = allies;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public List<String> getAllies() {
         return allies;
     }
