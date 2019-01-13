@@ -12,7 +12,7 @@ Rules of the Ballot system
 © 2018 geektrust.in. All rights reserved.
  
 Rules to decide allegiance by a kingdom
-1. The receiving kingdom has to give allegiance to the sending kingdom if the message contains the letters of the animal in their emblem (same as problem 1).
+1. The receiving kingdom has to give allegiance to the sending kingdom if the message contains the letters of the animal in their emblem (same as https://github.com/Mahitha1467/AGoldenCrown).
 2. If the receiving kingdom is competing to be the ruler, they will not give their allegiance even if the message they received is correct. 3. A kingdom cannot give their allegiance twice. If they have given their allegiance once, they will not give their allegiance again even
 if they get a second message and the message is correct.  In case there is a tie
 1. If there is a tie, the whole ballot process is repeated but only with the tied kingdoms till there is a winner. 
@@ -39,9 +39,12 @@ Allies of Ruler?
 Output: Land Fire
 
 Software Dependencies: Java8
+How to add Libraries in Intellij : https://www.jetbrains.com/help/idea/library.html
 Test Dependencies: 
 powermock-api-mockito:1.6.5
 powermock-module-junit4:1.6.5
+
+or required jars can be found in lib folder
 
 IDE support:  IntelliJ IDEA
 
